@@ -13,13 +13,13 @@ class Main {
 
         System.out.println("STARTING FRUIT ON TREE: " + tree.getApplesOnTree());
 
-        DropAllTheApples(measuringTape, tree);
+        DropAllTheFruit(measuringTape, tree);
 
         System.out.println("ENDING FRUIT ON TREE: " + tree.getApplesOnTree());
 
     }
 
-    private static void DropAllTheApples(MeasuringTape measuringTape, Tree tree) {
+    private static void DropAllTheFruit(MeasuringTape measuringTape, Tree tree) {
 
         int startingApplesOnTree = tree.getApplesOnTree();
 
