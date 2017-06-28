@@ -9,7 +9,7 @@ class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Apple> fruit = getFruit();
+        ArrayList<IFruit> fruit = getFruit();
 
         Tree tree = new Tree(fruit);
 
@@ -21,8 +21,8 @@ class Main {
 
     }
 
-    private static ArrayList<Apple> getFruit() {
-        ArrayList<Apple> fruit = new ArrayList<>(10);
+    private static ArrayList<IFruit> getFruit() {
+        ArrayList<IFruit> fruit = new ArrayList<>(10);
         for (int i = 0; i < 10; i++) {
             fruit.add(new Apple());
         }
