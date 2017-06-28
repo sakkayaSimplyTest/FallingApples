@@ -1,26 +1,26 @@
 package com.pluralsight.fruit;
 
+import java.util.ArrayList;
+
 public class Tree {
 
-    private int applesOnTree;
+    private ArrayList<IFruit> fruitOnTree;
 
-    public Tree() {
-        this(5);
+    public Tree(ArrayList<IFruit> fruitOnTree) {
+
+        this.fruitOnTree = fruitOnTree;
+
     }
 
-    public Tree(int applesOnTree) {
+    public IFruit dropFruit() {
 
-        this.applesOnTree = applesOnTree;
+        IFruit fruit = fruitOnTree.get(0);
+        fruitOnTree.remove(0);
+
+        return fruit;
     }
 
-    public Apple dropApple() {
-
-        applesOnTree = applesOnTree - 1;
-
-        return new Apple();
-    }
-
-    public int getApplesOnTree() {
-        return applesOnTree;
+    public int getFruitOnTree() {
+        return fruitOnTree.size();
     }
 }

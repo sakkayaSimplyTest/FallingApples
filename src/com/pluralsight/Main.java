@@ -3,33 +3,45 @@ package com.pluralsight;
 import com.pluralsight.fruit.*;
 import com.pluralsight.toolbox.MeasuringTape;
 
+import java.util.ArrayList;
+
 class Main {
 
     public static void main(String[] args) {
 
-        MeasuringTape measuringTape = new MeasuringTape();
+        ArrayList<Apple> fruit = getFruit();
 
-        Tree tree = new Tree(10);
+        Tree tree = new Tree(fruit);
 
-        System.out.println("STARTING FRUIT ON TREE: " + tree.getApplesOnTree());
+        System.out.println("STARTING FRUIT ON TREE: " + tree.getFruitOnTree());
 
-        DropAllTheFruit(measuringTape, tree);
+        DropAllTheFruit(tree);
 
-        System.out.println("ENDING FRUIT ON TREE: " + tree.getApplesOnTree());
+        System.out.println("ENDING FRUIT ON TREE: " + tree.getFruitOnTree());
 
     }
 
-    private static void DropAllTheFruit(MeasuringTape measuringTape, Tree tree) {
+    private static ArrayList<Apple> getFruit() {
+        ArrayList<Apple> fruit = new ArrayList<>(10);
+        for (int i = 0; i < 10; i++) {
+            fruit.add(new Apple());
+        }
+        return fruit;
+    }
 
-        int startingApplesOnTree = tree.getApplesOnTree();
+    private static void DropAllTheFruit(Tree tree) {
+
+        MeasuringTape measuringTape = new MeasuringTape();
+
+        int startingApplesOnTree = tree.getFruitOnTree();
 
         for (int i = 1; i <= startingApplesOnTree; i++) {
 
-            Apple apple = tree.dropApple();
+            IFruit fruit = tree.dropFruit();
 
-            double distanceFromTree = measuringTape.getDistance(tree, apple);
+            double distanceFromTree = measuringTape.getDistance(tree, fruit);
 
-            System.out.println("Apple " + (i) + ": " + (int) distanceFromTree + " feet");
+            System.out.println(fruit.getName() + " " + (i) + ": " + (int) distanceFromTree + " feet");
         }
     }
 }

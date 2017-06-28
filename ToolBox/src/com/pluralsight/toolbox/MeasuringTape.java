@@ -8,7 +8,7 @@ public class MeasuringTape {
 
 
     // TODO: Implement a Measuring Tape that actually measures distances
-    public double getDistance(Tree tree, Apple apple) {
+    public double getDistance(Tree tree, IFruit fruit) {
 
         Random random = new Random();
         return random.nextDouble() * 10;
