@@ -9,13 +9,13 @@ public class Apple implements IFruit {
 
     @Override
     public String getName() {
-        System.out.println("NAME: " + NAME);
+
         return NAME;
     }
 
     @Override
     public int getRollMultiplier() {
-        System.out.println("ROLL_MULTIPLIER: " + ROLL_MULTIPLIER);
+
         return ROLL_MULTIPLIER;
     }
 }
