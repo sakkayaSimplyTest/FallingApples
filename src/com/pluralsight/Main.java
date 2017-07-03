@@ -11,12 +11,9 @@ class Main {
 
     public static void main(String[] args) {
 
-
-        String html = "";
-
         ArrayList<IFruit> fruit = getFruit();
 
-        Tree tree= new Tree(fruit);
+        Tree tree = new Tree(fruit);
 
         System.out.println("STARTING FRUIT ON TREE: " + tree.getFruitOnTree());
 
