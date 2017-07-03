@@ -1,6 +1,8 @@
 package com.pluralsight;
 
-import com.pluralsight.fruit.*;
+import com.pluralsight.fruit.Apple;
+import com.pluralsight.fruit.IFruit;
+import com.pluralsight.fruit.Tree;
 import com.pluralsight.toolbox.MeasuringTape;
 
 import java.util.ArrayList;
@@ -9,16 +11,18 @@ class Main {
 
     public static void main(String[] args) {
 
+
+        String html = "";
+
         ArrayList<IFruit> fruit = getFruit();
 
-        Tree tree = new Tree(fruit);
+        Tree tree= new Tree(fruit);
 
         System.out.println("STARTING FRUIT ON TREE: " + tree.getFruitOnTree());
 
         DropAllTheFruit(tree);
 
         System.out.println("ENDING FRUIT ON TREE: " + tree.getFruitOnTree());
-
     }
 
     private static ArrayList<IFruit> getFruit() {
