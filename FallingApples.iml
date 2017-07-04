@@ -9,6 +9,5 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Fruit" exported="" />
     <orderEntry type="module" module-name="ToolBox" exported="" />
-    <orderEntry type="library" name="ant:ant-apache-log4j:1.6.5" level="project" />
   </component>
 </module>
