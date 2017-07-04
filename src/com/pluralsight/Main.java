@@ -13,11 +13,8 @@ class Main {
 
         Tree tree = new Tree(fruit);
 
-        System.out.println("STARTING FRUIT ON TREE: " + tree.getFruitOnTree());
-
         DropAllTheFruit(tree);
 
-        System.out.println("ENDING FRUIT ON TREE: " + tree.getFruitOnTree());
     }
 
     private static ArrayList<IFruit> getFruit() {
@@ -37,6 +34,8 @@ class Main {
 
         int startingFruitOnTree = tree.getFruitOnTree();
 
+        System.out.println("STARTING FRUIT ON TREE: " + tree.getFruitOnTree());
+
         for (int i = 1; i <= startingFruitOnTree; i++) {
 
             IFruit fruit = tree.dropFruit();
@@ -45,6 +44,9 @@ class Main {
 
             System.out.println(fruit.getName() + " " + (i) + ": " + (int) distanceFromTree + " feet");
         }
+
+        System.out.println("ENDING FRUIT ON TREE: " + tree.getFruitOnTree());
+
     }
 }
 

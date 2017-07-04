@@ -1,6 +1,7 @@
 package com.pluralsight.toolbox;
 
-import com.pluralsight.fruit.*;
+import com.pluralsight.fruit.IFruit;
+import com.pluralsight.fruit.Tree;
 
 import java.util.Random;
 
