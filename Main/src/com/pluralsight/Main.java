@@ -46,7 +46,7 @@ class Main {
 
             double distanceFromTree = measuringTape.getDistance(tree, fruit);
 
-            System.out.println(fruit.getName() + " " + (i) + ": " + (int) distanceFromTree + " feet");
+            System.out.printf("%s %d: %s feet%n", fruit.getName(), i, (int)distanceFromTree);
         }
 
         System.out.printf("ENDING FRUIT ON TREE: %d%n", tree.getFruitOnTree());
