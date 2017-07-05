@@ -11,6 +11,8 @@ class Main {
 
     public static void main(String[] args) {
 
+        String string = "";
+
         ArrayList<IFruit> fruit = getFruit();
 
         Tree tree = new Tree(fruit);
@@ -36,7 +38,7 @@ class Main {
 
         int startingFruitOnTree = tree.getFruitOnTree();
 
-        System.out.println("STARTING FRUIT ON TREE: " + tree.getFruitOnTree());
+        System.out.printf("STARTING FRUIT ON TREE: %d%n", tree.getFruitOnTree());
 
         for (int i = 1; i <= startingFruitOnTree; i++) {
 
@@ -47,7 +49,7 @@ class Main {
             System.out.println(fruit.getName() + " " + (i) + ": " + (int) distanceFromTree + " feet");
         }
 
-        System.out.println("ENDING FRUIT ON TREE: " + tree.getFruitOnTree());
+        System.out.printf("ENDING FRUIT ON TREE: %d%n", tree.getFruitOnTree());
 
     }
 }

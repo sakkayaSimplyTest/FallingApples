@@ -3,8 +3,9 @@ package com.pluralsight.fruit;
 public class Orange implements IFruit {
 
 
-    int foo = 0;
-    int bar = 0;
+    private int foo = 0;
+
+    private int bar = 0;
 
     public int getFoo() {
         return foo;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Tree {
 
-    private ArrayList<IFruit> fruitOnTree;
+    private final ArrayList<IFruit> fruitOnTree;
 
     public Tree(ArrayList<IFruit> fruitOnTree) {
 

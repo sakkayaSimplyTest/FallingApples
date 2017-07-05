@@ -9,13 +9,7 @@ public class MeasuringTape {
     // TODO: Implement a Measuring Tape that actually measures distances
     public double getDistance(Tree tree, IFruit fruit) {
 
-        Random random = null;
-
-        try {
-            random = new Random();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Random random = new Random();
 
         return random.nextDouble() * fruit.getRollMultiplier();
 
