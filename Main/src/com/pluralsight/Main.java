@@ -1,6 +1,8 @@
 package com.pluralsight;
 
-import com.pluralsight.fruit.*;
+import com.pluralsight.fruit.Apple;
+import com.pluralsight.fruit.IFruit;
+import com.pluralsight.fruit.Tree;
 import com.pluralsight.toolbox.MeasuringTape;
 
 import java.util.ArrayList;
