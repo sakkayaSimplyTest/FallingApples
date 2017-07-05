@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FallingApples.iml" filepath="$PROJECT_DIR$/FallingApples.iml" />
       <module fileurl="file://$PROJECT_DIR$/Fruit/Fruit.iml" filepath="$PROJECT_DIR$/Fruit/Fruit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Main/Main.iml" filepath="$PROJECT_DIR$/Main/Main.iml" />
       <module fileurl="file://$PROJECT_DIR$/ToolBox/ToolBox.iml" filepath="$PROJECT_DIR$/ToolBox/ToolBox.iml" />
     </modules>
   </component>
