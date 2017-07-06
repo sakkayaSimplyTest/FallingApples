@@ -1,6 +1,6 @@
 package com.pluralsight.fruit;
 
-public class Orange implements ITastyFruit {
+public class Orange implements IFruit {
 
     @Override
     public String getName() {

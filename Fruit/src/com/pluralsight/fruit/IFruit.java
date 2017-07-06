@@ -1,6 +1,6 @@
 package com.pluralsight.fruit;
 
-public interface ITastyFruit {
+public interface IFruit {
 
     String getName();
 
