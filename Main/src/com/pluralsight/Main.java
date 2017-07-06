@@ -1,7 +1,7 @@
 package com.pluralsight;
 
 import com.pluralsight.fruit.Apple;
-import com.pluralsight.fruit.IFruit;
+import com.pluralsight.fruit.ITastyFruit;
 import com.pluralsight.fruit.Tree;
 import com.pluralsight.toolbox.MeasuringTape;
 
@@ -11,7 +11,7 @@ class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<IFruit> fruit = getFruit();
+        ArrayList<ITastyFruit> fruit = getFruit();
 
         Tree tree = new Tree(fruit);
 
@@ -19,9 +19,9 @@ class Main {
 
     }
 
-    private static ArrayList<IFruit> getFruit() {
+    private static ArrayList<ITastyFruit> getFruit() {
 
-        ArrayList<IFruit> fruit = new ArrayList<>(10);
+        ArrayList<ITastyFruit> fruit = new ArrayList<>(10);
 
         for (int i = 0; i < 10; i++) {
             fruit.add(new Apple());
@@ -32,7 +32,7 @@ class Main {
 
     private static void DropAllTheFruit(Tree tree) {
 
-        MeasuringTape measuringTape = new MeasuringTape();
+        MeasuringTape measuringTape = MeasuringTape.createMeasuringTape();
 
         int startingFruitOnTree = tree.getFruitOnTree();
 
@@ -40,9 +40,9 @@ class Main {
 
         for (int i = 1; i <= startingFruitOnTree; i++) {
 
-            IFruit fruit = tree.dropFruit();
+            ITastyFruit fruit = tree.dropFruit();
 
-            double distanceFromTree = measuringTape.getDistance(tree, fruit);
+            double distanceFromTree = measuringTape.getDistance(fruit, tree);
 
             System.out.printf("%s %d: %s feet%n", fruit.getName(), i, (int) distanceFromTree);
         }

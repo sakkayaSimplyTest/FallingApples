@@ -1,7 +1,7 @@
 package com.pluralsight.fruit;
 
 
-public class Apple implements IFruit {
+public class Apple implements ITastyFruit {
 
     private static final String NAME = "Apple";
     private static final int ROLL_MULTIPLIER = 10;

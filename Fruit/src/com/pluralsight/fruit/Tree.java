@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class Tree {
 
-    private final ArrayList<IFruit> fruitOnTree;
+    private final ArrayList<ITastyFruit> fruitOnTree;
 
-    public Tree(ArrayList<IFruit> fruitOnTree) {
+    public Tree(ArrayList<ITastyFruit> fruitOnTree) {
 
         this.fruitOnTree = fruitOnTree;
 
     }
 
-    public IFruit dropFruit() {
+    public ITastyFruit dropFruit() {
 
-        IFruit fruit = fruitOnTree.get(0);
+        ITastyFruit fruit = fruitOnTree.get(0);
         fruitOnTree.remove(0);
 
         return fruit;
@@ -23,4 +23,5 @@ public class Tree {
     public int getFruitOnTree() {
         return fruitOnTree.size();
     }
+
 }
