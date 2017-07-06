@@ -11,8 +11,6 @@ class Main {
 
     public static void main(String[] args) {
 
-        String string = "";
-
         ArrayList<IFruit> fruit = getFruit();
 
         Tree tree = new Tree(fruit);
@@ -46,7 +44,7 @@ class Main {
 
             double distanceFromTree = measuringTape.getDistance(tree, fruit);
 
-            System.out.printf("%s %d: %s feet%n", fruit.getName(), i, (int)distanceFromTree);
+            System.out.printf("%s %d: %s feet%n", fruit.getName(), i, (int) distanceFromTree);
         }
 
         System.out.printf("ENDING FRUIT ON TREE: %d%n", tree.getFruitOnTree());
