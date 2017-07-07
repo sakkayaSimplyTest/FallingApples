@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-import com.pluralsight.fruit.Apple;
+import com.pluralsight.fruit.Banana;
 import com.pluralsight.fruit.IFruit;
 import com.pluralsight.fruit.Tree;
 import com.pluralsight.toolbox.MeasuringTape;
@@ -13,7 +13,17 @@ class Main {
 
         ArrayList<IFruit> fruit = getFruit();
 
-        Tree tree = new Tree(fruit);
+        Tree tree = null;
+
+        try {
+            tree = new Tree(fruit);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if (tree == null) {
+            return;
+        }
 
         DropAllTheFruit(tree);
 
@@ -23,12 +33,14 @@ class Main {
 
         ArrayList<IFruit> fruit = new ArrayList<>(10);
 
-        for (int i = 0; i < 10; i++) {
-            fruit.add(new Apple());
+        for (int i = 0; i < 12; i++) {
+            fruit.add(new Banana());
         }
 
         return fruit;
     }
+
+
 
     private static void DropAllTheFruit(Tree tree) {
 
